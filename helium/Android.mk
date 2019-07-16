@@ -1,3 +1,4 @@
+ifneq ($(QCPATH),)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -12,7 +13,7 @@ LOCAL_SHARED_LIBRARIES := \
          libnativehelper \
          libcutils
 
-FM_HCI_DIR:= vendor/qcom/opensource/commonsys/fm
+FM_HCI_DIR:= vendor/qcom/opensource/fm-commonsys
 
 LOCAL_C_INCLUDES += $(FM_HCI_DIR)/fm_hci
 
@@ -20,3 +21,4 @@ LOCAL_MODULE := fm_helium
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+endif
