@@ -1,3 +1,5 @@
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
+
 LOCAL_PATH:= $(call my-dir)
 LOCAL_DIR_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -26,3 +28,5 @@ include $(LOCAL_PATH)/fm_hci/Android.mk
 
 LOCAL_PATH := $(LOCAL_DIR_PATH)
 include $(LOCAL_PATH)/helium/Android.mk
+
+endif # BOARD_HAVE_QCOM_FM
