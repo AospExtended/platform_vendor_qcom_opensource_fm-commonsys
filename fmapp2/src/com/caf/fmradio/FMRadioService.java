@@ -2011,11 +2011,7 @@ public class FMRadioService extends Service
               (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
           if((notificationManager != null)
             && (notificationManager.getNotificationChannel(FMRADIO_NOTIFICATION_CHANNEL) != null)) {
-             try {
-               notificationManager.deleteNotificationChannel(FMRADIO_NOTIFICATION_CHANNEL);
-             } catch (Exception e) {
-               Log.e(LOGTAG,"exception raised from deleteNotificationChannel");
-             }
+             notificationManager.deleteNotificationChannel(FMRADIO_NOTIFICATION_CHANNEL);
           }
       }
    }
